@@ -17,7 +17,7 @@ if(not __name__ == '__main__'): #prevent attempted use as a library without havi
 parser = argparse.ArgumentParser( #get an argument parser
 	prog = 'PyCBprep',
 	description = 'Takes an svg and renders it out to an appropriately scaled and padded png for exposure on a dlp 3d printer',
-	epilog = 'Written by Ducks And Netherwort (ducksnetherwort.ddns.net, github.com/DucksAndNetherwort) for MakeItZone (makeit.zone, github.com/MakeItZone)'
+	epilog = 'Written by Ducks And Netherwort (ducksnetherwort.ddns.net, github.com/DucksAndNetherwort)'
 )
 
 #define all our arguments
