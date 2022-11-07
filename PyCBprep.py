@@ -73,11 +73,11 @@ with tempfile.NamedTemporaryFile() as tmp: #get a tempfile with a name, so we ca
 		log.debug('made background')
 		bg.paste(rasterSvg, (int(int(conf.get('PRINTERXPX')) / 2 - svgRasterWidth / 2), int(int(conf.get('PRINTERYPX')) / 2 - svgRasterHeight / 2)), rasterSvg.convert('RGBA')) #paste the rasterised svg over the blank image
 
-		if args.invert:
+		if args.invert: #check if we need color inversion
 			log.debug('inverting colors')
-			ImageOps.invert(bg).save(args.output) #save the result
+			ImageOps.invert(bg).save(args.output) #save the result with colors inverted
 		else:
-			bg.save(args.output)
+			bg.save(args.output) #save the result
 
 		log.debug('image generated, closing file')
 		args.output.close()
