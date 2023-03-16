@@ -65,7 +65,7 @@ with tempfile.NamedTemporaryFile() as tmp: #get a tempfile with a name, so we ca
 	log.debug('opened tempfile')
 	finalRasterCommand = (rasterCommand.format(outputPng=tmp.name, rasterWidth=svgRasterWidth, rasterHeight=svgRasterHeight, inputSvg=args.svgFilename.name)) #run said raster command
 	log.debug(f'final raster command: {finalRasterCommand}')
-	log.info(f'rasterising {args.svgFilename.name}')
+	log.info(f'rasterizing {args.svgFilename.name}')
 	out = subprocess.run(finalRasterCommand, shell=True)
 	log.debug(f'raster command returned {out.returncode}')
 	with Image.open(tmp) as rasterSvg: #get it's output
