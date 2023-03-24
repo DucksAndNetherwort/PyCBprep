@@ -2,7 +2,7 @@
 
 import argparse
 import pathlib
-from dotenv import dotenv_values
+from dotenv import dotenv_values #need get pip to install python-dotenv, not dotenv
 import xml.etree.ElementTree as xml
 from PIL import Image #needs to be installed as it's not stock, also I'm using pillow. It wouldn't install so I did python3 -m pip install -U --force-reinstall pip, then it worked just fine
 from PIL import ImageOps
